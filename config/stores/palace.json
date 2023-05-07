@@ -1,4 +1,6 @@
 {
   "name": "Palace",
-  "image": "palace.png"
+  "slug": "palace",
+  "image": "palace.png",
+  "baseUrl": "https://shop.palaceskateboards.com/"
 }

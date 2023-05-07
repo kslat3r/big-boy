@@ -1,4 +1,6 @@
 {
   "name": "Supreme",
-  "image": "supreme.png"
+  "slug": "supreme",
+  "image": "supreme.png",
+  "baseUrl": "https://uk.supreme.com/collections/all"
 }
