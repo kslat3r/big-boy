@@ -41,7 +41,7 @@ function Store(props) {
 }
  
 export async function getServerSideProps(ctx) {
-  const store = require(`../../config/stores/${ctx.query.id}`)
+  const store = require(`big-boy-stores/${ctx.query.id}.json`)
   
   return { props: { store } };
 }

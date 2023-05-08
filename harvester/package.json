@@ -1,0 +1,12 @@
+{
+  "name": "big-boy-harvester",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "big-boy-stores": "../stores",
+    "playwright": "^1.33.0"
+  }
+}

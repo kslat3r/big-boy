@@ -1,4 +1,4 @@
-import stores from '../config/stores';
+import stores from 'big-boy-stores';
 
 export default function Index() {
   return (
