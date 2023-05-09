@@ -1,7 +1,6 @@
 const stores = require('big-boy-stores');
-const urlScraper = require('./lib/scrapers/url');
-const productScraper = require('./lib/scrapers/product');
-const sizeFilter = require('./lib/filters/size');
+const urlScraper = require('./lib/url-scraper');
+const productScraper = require('./lib/product-scraper');
 
 (async () => {
   await stores.forEach(async store => {
@@ -11,10 +10,7 @@ const sizeFilter = require('./lib/filters/size');
       throw e;
     }
 
-    store.products = {
-      all: [],
-      filtered: []
-    };
+    store.products = [];
     
     await store.urls.forEach(async url => {
       let product;
@@ -25,11 +21,7 @@ const sizeFilter = require('./lib/filters/size');
         throw e;
       }
 
-      store.products.all.push(product);
-
-      if (sizeFilter(product, store)) {
-        store.products.filtered.push(product); 
-      }
+      store.products.push(product);
     });
     
     console.log(store);

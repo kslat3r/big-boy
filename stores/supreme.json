@@ -2,5 +2,7 @@
   "name": "Supreme",
   "slug": "supreme",
   "image": "supreme.png",
-  "baseUrl": "https://uk.supreme.com/collections/all"
+  "url": "https://uk.supreme.com/collections/all",
+  "paging": false,
+  "urlSelector": "li.collection-product-item a"
 }

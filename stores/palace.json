@@ -2,5 +2,8 @@
   "name": "Palace",
   "slug": "palace",
   "image": "palace.png",
-  "baseUrl": "https://shop.palaceskateboards.com/"
+  "url": "https://shop.palaceskateboards.com/collections/frontpage?page=%s",
+  "paging": true,
+  "maxPage": 20,
+  "urlSelector": "div.product-info a"
 }

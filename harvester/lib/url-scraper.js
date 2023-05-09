@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 
 module.exports = async (store) => {
-  let urls = [];
+  const urls = [];
 
   const browser = await chromium.launch();
   const page = await browser.newPage();
@@ -22,21 +22,16 @@ module.exports = async (store) => {
 
     // get urls
 
-    const urlSelector = store.urlSelector;
-    const found = await page.evaluate(async () => {
-      const anchors = document.querySelectorAll(urlSelector);
-      console.log(anchors);
+    const found = await page.evaluate((store) => {
+      const anchors = document.querySelectorAll(store.urlSelector);
 
-      return anchors;
+      return Object.values(anchors).map(a => a.href);
+    }, store);
 
-      // return anchors.map(a => a.href);
-    });
-
-    console.log(found);
+    if (found.length) {
+      urls.push(...found);
+    }
   }
-
-
-  
 
   await browser.close();
   return urls;
