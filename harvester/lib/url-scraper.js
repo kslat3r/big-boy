@@ -9,13 +9,7 @@ module.exports = async (store) => {
   // set up loop
 
   let i = 1;
-  let max = 1;
-
-  if (store.paging && store.maxPage) {
-    max = store.maxPage;
-  }
-
-  for (i; i <= max; i++) {
+  while (true) {
     // go to page
 
     await page.goto(store.url.replace('%s', i));
@@ -28,9 +22,17 @@ module.exports = async (store) => {
       return Object.values(anchors).map(a => a.href);
     }, store);
 
-    if (found.length) {
-      urls.push(...found);
+    if (!found.length) {
+      break;
     }
+
+    urls.push(...found);
+
+    if (!store.paging) {
+      break;
+    }    
+    
+    i++;
   }
 
   await browser.close();

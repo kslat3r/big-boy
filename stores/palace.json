@@ -4,6 +4,5 @@
   "image": "palace.png",
   "url": "https://shop.palaceskateboards.com/collections/frontpage?page=%s",
   "paging": true,
-  "maxPage": 20,
   "urlSelector": "div.product-info a"
 }
