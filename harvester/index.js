@@ -16,7 +16,7 @@ const productScraper = require('./lib/product-scraper');
       let product;
 
       try {
-        product = await productScraper(url);
+        product = await productScraper(store, url);
       } catch (e) {
         throw e;
       }
