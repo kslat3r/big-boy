@@ -4,5 +4,14 @@
   "image": "supreme.png",
   "url": "https://uk.supreme.com/collections/all",
   "paging": false,
-  "urlSelector": "li.collection-product-item a"
+  "urlSelector": "li.collection-product-item a",
+  "imgSelector": ".swiper-slide-active img",
+  "sizesSelector": ".select-box select option",
+  "sizesMap": {
+    "Small": "S",
+    "Medium": "M",
+    "Large": "L",
+    "XLarge": "XL",
+    "XXLarge": "XXL"
+  }
 }

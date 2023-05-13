@@ -4,5 +4,14 @@
   "image": "palace.png",
   "url": "https://shop.palaceskateboards.com/collections/frontpage?page=%s",
   "paging": true,
-  "urlSelector": "div.product-info a"
+  "urlSelector": "div.product-info a",
+  "imgSelector": "img.img.is-selected",
+  "sizesSelector": "#product-select option",
+  "sizesMap": {
+    "Small": "S",
+    "Medium": "M",
+    "Large": "L",
+    "X-Large": "XL",
+    "2X-Large": "XXL"
+  }
 }

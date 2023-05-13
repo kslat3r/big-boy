@@ -6,7 +6,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "big-boy-stores": "../stores",
+    "@playwright/test": "^1.33.0",
     "playwright": "^1.33.0"
   }
 }
